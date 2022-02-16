@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 public class Controlador1 {
-    @Autowired PersonaService ps;
+    @Autowired @Qualifier ("PersonaServiceImp") PersonaService ps;
     @GetMapping("/controlador1/addPersona")
     public Object addPersona(@RequestHeader String nombre, @RequestHeader String poblacion, @RequestHeader int edad){
         ps.setNombre(nombre);

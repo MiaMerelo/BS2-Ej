@@ -2,15 +2,17 @@ package BS2;
 
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("PersonaServiceImp")
 public class PersonaServiceImp implements PersonaService{
 
     Persona p = new Persona();
 
-    public PersonaServiceImp(String nombre, String poblacion, int edad){
-        p = new Persona(nombre, poblacion, edad);
+    public void createPersona(Persona persona) {
+        this.p.setNombre(persona.getNombre());
+        this.p.setPoblacion(persona.getPoblacion());
+        this.p.setEdad(persona.getEdad());
     }
-
+    
     public void setNombre(String nombre) {
         p.setNombre(nombre);
     }

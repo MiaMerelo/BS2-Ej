@@ -7,4 +7,5 @@ public interface PersonaService {
     String getNombre();
     String getPoblacion();
     int getEdad();
+    void createPersona(Persona persona);
 }

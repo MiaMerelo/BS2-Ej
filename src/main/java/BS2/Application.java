@@ -16,14 +16,20 @@ public class Application {
 
     @Bean(name = "bean1")
     PersonaService getPersonaService1(){
-        return new PersonaServiceImp("Ana", "Finisterre", 18);
+        PersonaService ps = new PersonaServiceImp();
+        ps.createPersona(new Persona("Ana", "Finisterre", 18));
+        return ps;
     }
     @Bean(name = "bean2")
     PersonaService getPersonaService2(){
-        return new PersonaServiceImp("Belén", "Sevilla", 24);
+        PersonaService ps = new PersonaServiceImp();
+        ps.createPersona(new Persona("Belén", "Sevilla", 24));
+        return ps;
     }
     @Bean(name = "bean3")
     PersonaService getPersonaService3(){
-        return new PersonaServiceImp("Carmen", "Trinidad", 32);
+        PersonaService ps = new PersonaServiceImp();
+        ps.createPersona(new Persona("Carmen", "Trinidad", 32));
+        return ps;
     }
 }
