@@ -12,7 +12,6 @@ public class Controlador1 {
         ps.setNombre(nombre);
         ps.setPoblacion(poblacion);
         ps.setEdad(edad);
-
         return new Persona(nombre, poblacion, edad);
     }
 
